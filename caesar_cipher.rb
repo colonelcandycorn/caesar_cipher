@@ -1,13 +1,7 @@
 def caesar_cipher(string, shift_factor)
-  lower_letters =
-    ("a".."z").reduce(Array.new()) do |arr, letter|
-      arr.push(letter)
-    end
+  lower_letters = Array ("a".."z")
 
-  upper_letters =
-    ("A".."Z").reduce(Array.new()) do |arr, letter|
-      arr.push(letter)
-    end
+  upper_letters = Array ("A".."Z")
 
   string.split("").map do |letter|
     if lower_letters.include?(letter)
@@ -21,3 +15,5 @@ def caesar_cipher(string, shift_factor)
     join("")
 
 end
+
+puts caesar_cipher("What a string!", 5)
