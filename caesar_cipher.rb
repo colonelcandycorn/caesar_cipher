@@ -13,5 +13,4 @@ def caesar_cipher(string, shift_factor)
     end
   end.
     join("")
-
 end
